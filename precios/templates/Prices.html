@@ -1,0 +1,188 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+<script>
+    function GoToUpdate(code) {
+        code = code.toString();
+        typeOf= code.substring(0, 2);
+        size = code.substring(4, 6);
+        door = code.substring(3, 4);
+        if(size == 10 || size == 11 || size == 12){
+            size = size * 10
+        }
+
+        interiorBlanco = code.substring(2, 3);
+        size = size/100;
+        if(typeOf=="CA"){
+            typeOf = "CAJONERA";
+        }
+        if(typeOf=="CO"){
+            typeOf = "COLGADOR";
+        }
+        if(typeOf=="RE"){
+            typeOf = "REPISERO";
+        }
+        location.href= location.href+"UpdatePrice?size="+size+"&typeOf="+typeOf+"&door="+door+"&interiorBlanco="+interiorBlanco;
+        //http://127.0.0.1:8000/UpdatePrice?size=.4&typeOf=CAJONERA&door=True&interiorBlanco=1
+    }
+</script>
+<table style="width:100%">
+    <tr>
+        <th rowspan="7">CAJONERA</th>
+        <th colspan="10">INTERIOR BLANCO</th>
+    </tr>
+    <tr>
+        <th ></th>
+        <th >40 cm</th>
+        <th >60 cm</th>
+        <th >80 cm</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CA1140')">${{ CA1140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA1160')">${{ CA1160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA1180')">${{ CA1180 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CA1040')">${{ CA1040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA1060')">${{ CA1060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA1080')">${{ CA1080 }}</button></th>
+    </tr>
+    <tr>
+        <th colspan="10">INTERIOR COLOR</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CA0140')">${{ CA0140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA0160')">${{ CA0160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA0180')">${{ CA0180 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CA0040')">${{ CA0040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA0060')">${{ CA0060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CA0080')">${{ CA0080 }}</button></th>
+    </tr>
+    <tr>
+        <th rowspan="7">REPISERO</th>
+        <th colspan="10">INTERIOR BLANCO</th>
+    </tr>
+    <tr>
+        <th ></th>
+        <th >40 cm</th>
+        <th >50 cm</th>
+        <th >60 cm</th>
+        <th >70 cm</th>
+        <th >80 cm</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('RE1140')">${{RE1140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1150')">${{RE1150 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1160')">${{RE1160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1170')">${{RE1170 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1180')">${{RE1180 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('RE1040')">${{RE1040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1050')">${{RE1050 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1060')">${{RE1060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1070')">${{RE1070 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE1080')">${{RE1080 }}</button></th>
+    </tr>
+    <tr>
+        <th colspan="10">INTERIOR COLOR</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('RE0140')">${{RE0140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0150')">${{RE0150 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0160')">${{RE0160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0170')">${{RE0170 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0180')">${{RE0180 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('RE0040')">${{RE0040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0050')">${{RE0050 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0060')">${{RE0060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0070')">${{RE0070 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('RE0080')">${{RE0080 }}</button></th>
+    </tr>
+    <tr>
+        <th rowspan="7">COLGADOR</th>
+        <th colspan="10">INTERIOR BLANCO</th>
+    </tr>
+    <tr>
+        <th ></th>
+        <th >40 cm</th>
+        <th >50 cm</th>
+        <th >60 cm</th>
+        <th >70 cm</th>
+        <th >80 cm</th>
+        <th >90 cm</th>
+        <th >100 cm</th>
+        <th >110 cm</th>
+        <th >120 cm</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CO1140')"> ${{CO1140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1150')"> ${{CO1150 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1160')"> ${{CO1160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1170')"> ${{CO1170 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1180')"> ${{CO1180 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1190')"> ${{CO1190 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO11100')">${{CO11100 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO11110')">${{CO11110 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO11120')">${{CO11120 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CO1040')"> ${{CO1040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1050')"> ${{CO1050 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1060')"> ${{CO1060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1070')"> ${{CO1070 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1080')"> ${{CO1080 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO1090')"> ${{CO1090 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO10100')">${{CO10100 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO10110')">${{CO10110 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO10120')">${{CO10120 }}</button></th>
+    </tr>
+    <tr>
+        <th colspan="10">INTERIOR COLOR</th>
+    </tr>
+    <tr>
+        <th >Con Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CO0140')"> ${{CO0140 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0150')"> ${{CO0150 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0160')"> ${{CO0160 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0170')"> ${{CO0170 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0180')"> ${{CO0180 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0190')"> ${{CO0190 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO01100')">${{CO01100 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO01110')">${{CO01110 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO01120')">${{CO01120 }}</button></th>
+    </tr>
+    <tr>
+        <th >Sin Puerta</th>
+        <th ><button type="button" onclick="GoToUpdate('CO0040')"> ${{CO0040 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0050')"> ${{CO0050 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0060')"> ${{CO0060 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0070')"> ${{CO0070 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0080')"> ${{CO0080 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO0090')"> ${{CO0090 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO00100')">${{CO00100 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO00110')">${{CO00110 }}</button></th>
+        <th ><button type="button" onclick="GoToUpdate('CO00120')">${{CO00120 }}</button></th>
+    </tr>
+</table>
