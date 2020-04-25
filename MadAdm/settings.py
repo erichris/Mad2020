@@ -25,7 +25,7 @@ SECRET_KEY = '0jk8-_^+^2es==4xf$_fo(*++f#!_ar*d+qj16v1^d&(lccnn%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['207.38.94.107', 'waldoh.webfactional.com']
 
 
 # Application definition
@@ -77,6 +77,10 @@ WSGI_APPLICATION = 'MadAdm.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -121,7 +125,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'Textures'),
-)
+#STATIC_ROOT = '/home/waldoh/webapps/madereriaadmin/madereria/Textures/'
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'Textures'),
+#)
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "Textures"),
+    #'/var/www/static/',
+	#'/home/uniars/src/extra_static_media/',
+    '/home/uniars/webapps/newmadereria/',
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+STATIC_ROOT = '/home/uniars/webapps/newmadereria/'
