@@ -137,9 +137,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Textures"),
     #'/var/www/static/',
 	#'/home/uniars/src/extra_static_media/',
-    '/home/uniars/webapps/newmadereria/',
+    '/home/waldoh/webapps/newmadereria/',
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-STATIC_ROOT = '/home/uniars/webapps/newmadereria/'
+STATIC_ROOT = '/home/waldoh/webapps/newmadereria/'
