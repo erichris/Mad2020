@@ -23,5 +23,6 @@ class ModulesPrice(models.Model):
 
 
 class Textures(models.Model):
+    space = models.FloatField(default=0)
     name = models.CharField(default="NONE", max_length=100)
     img = models.ImageField(upload_to='Textures', max_length=9999, storage=OverwriteStorage())

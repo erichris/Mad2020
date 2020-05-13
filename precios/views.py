@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.template import loader
-from .models import ModulesPrice
+from .models import ModulesPrice, Textures 
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from .forms import MyForm
@@ -102,6 +102,11 @@ def index(request):
         ModulesPrice.objects.get_or_create(size=1.2, door=True, interiorBlanco=False, typeOf="COLGADOR")
 
 
+        ModulesPrice.objects.get_or_create(size=.01, door=False, interiorBlanco=True, typeOf="COLGADOR")
+        ModulesPrice.objects.get_or_create(size=.01, door=False, interiorBlanco=False, typeOf="COLGADOR")
+        ModulesPrice.objects.get_or_create(size=.02, door=False, interiorBlanco=True, typeOf="COLGADOR")
+        ModulesPrice.objects.get_or_create(size=.02, door=False, interiorBlanco=False, typeOf="COLGADOR")
+
         context = {
 
             #CAJONERAS
@@ -192,6 +197,12 @@ def index(request):
             'CO10120': ModulesPrice.objects.get(size=1.2, door=False, interiorBlanco=True, typeOf="COLGADOR").price,
             'CO00120': ModulesPrice.objects.get(size=1.2, door=False, interiorBlanco=False, typeOf="COLGADOR").price,
             'CO01120': ModulesPrice.objects.get(size=1.2, door=True, interiorBlanco=False, typeOf="COLGADOR").price,
+            
+            #Cachetes
+            'CO1001': ModulesPrice.objects.get(size=.01, door=False, interiorBlanco=True, typeOf="COLGADOR").price,
+            'CO0001': ModulesPrice.objects.get(size=.01, door=False, interiorBlanco=False, typeOf="COLGADOR").price,
+            'CO1002': ModulesPrice.objects.get(size=.02, door=False, interiorBlanco=True, typeOf="COLGADOR").price,
+            'CO0002': ModulesPrice.objects.get(size=.02, door=False, interiorBlanco=False, typeOf="COLGADOR").price,
         }
         return HttpResponse(template.render(context, request))
     else:
@@ -226,7 +237,7 @@ def update_price(request):
     form = MyForm(request.POST or None, instance=instance)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect('http://127.0.0.1:8000/')
+        return HttpResponseRedirect('/')
     return render(request, 'UpdatePrice.html', {'form': form})
 
 @csrf_exempt
@@ -245,6 +256,12 @@ def request_server(request):
             print(request.POST )
             #data = Login(request)
             data = queryPrice(request)
+        elif request.POST.get('ACTION') == "GetName":
+            data = {"STATUS": 300}
+            print("GetName")
+            print(request.POST )
+            #data = Login(request)
+            data = queryName(request)
     print(data)
     return JsonResponse(data, safe=False)
 
@@ -260,3 +277,11 @@ def queryPrice(request):
     obj = ModulesPrice.objects.get(size=SIZE, door=HASDOOR, interiorBlanco=INTERIORBLANCO, typeOf=MODULE)
     print (obj.price)
     return{"PRICE": obj.price}
+    
+    
+def queryName(request):
+    SPACE = request.POST.get('ID')
+    
+    obj = Textures.objects.get(space=SPACE)
+    #return{"NAME": 23}
+    return{"NAME": obj.name}

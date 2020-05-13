@@ -9,7 +9,7 @@ class ModulePriceAdmin(admin.ModelAdmin):
 
 
 class TexturesAdmin(admin.ModelAdmin):
-    list_display = ("name", "img")
+    list_display = ("name", "img", "space")
 
 
 admin.site.register(ModulesPrice, ModulePriceAdmin)

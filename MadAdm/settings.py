@@ -139,10 +139,7 @@ STATICFILES_DIRS = [
 	#'/home/uniars/src/extra_static_media/',
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "")
 
 STATIC_ROOT = '/home/waldoh/webapps/newmadereria/'
 
-
-ln -s /home/waldoh/webapps/madereriaadmin/madereria/Textures/ /home/waldoh/webapps/newmadereria/
-/home/waldoh/webapps/newmadereria/
