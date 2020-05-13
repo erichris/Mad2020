@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db8d53cd-b0c4-437c-8b66-353e67c0cb6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MadAdm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MadAdm/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,8 @@
       <workItem from="1586113776519" duration="9194000" />
       <workItem from="1586276255981" duration="18125000" />
       <workItem from="1587763265587" duration="1547000" />
-      <workItem from="1587787185430" duration="984000" />
+      <workItem from="1587787185430" duration="1793000" />
+      <workItem from="1589409785241" duration="6000" />
     </task>
     <servers />
   </component>
@@ -88,10 +88,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1361" y="406" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1586280103865" />
-    <state x="981" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587787189629">
+    <state x="981" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589409785416">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="981" y="344" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1587787189629" />
+    <state x="981" y="344" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1589409785416" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
