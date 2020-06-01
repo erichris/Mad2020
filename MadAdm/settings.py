@@ -25,7 +25,7 @@ SECRET_KEY = '0jk8-_^+^2es==4xf$_fo(*++f#!_ar*d+qj16v1^d&(lccnn%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '207.38.94.107', 'waldoh.webfactional.com']
+ALLOWED_HOSTS = ['127.0.0.1', '207.38.94.107', 'waldoh.webfactional.com', 'acordeclosets.com']
 
 
 # Application definition
