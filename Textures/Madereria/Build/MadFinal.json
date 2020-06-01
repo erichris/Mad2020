@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "Closets",
-"dataUrl": "Madereria.data.unityweb",
-"wasmCodeUrl": "Madereria.wasm.code.unityweb",
-"wasmFrameworkUrl": "Madereria.wasm.framework.unityweb",
+"dataUrl": "MadFinal.data.unityweb",
+"wasmCodeUrl": "MadFinal.wasm.code.unityweb",
+"wasmFrameworkUrl": "MadFinal.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
